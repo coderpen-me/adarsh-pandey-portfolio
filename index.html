@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Adarsh Pandey - distributed systems engineer building production AI infrastructure.">
+    <title>Adarsh Pandey | Systems Deck</title>
+    <link rel="preload" href="assets/Portfolio.png" as="image">
+    <link rel="preload" href="assets/agent-infrastructure-hero.png" as="image">
+    <link rel="stylesheet" href="styles.css?v=mobile-profile-4">
+  </head>
+  <body>
+    <canvas id="traceCanvas" aria-hidden="true"></canvas>
+
+    <header class="site-chrome" data-chrome>
+      <a class="mark" href="#panel-hero" aria-label="Adarsh Pandey home">AP</a>
+      <nav aria-label="Portfolio sections">
+        <a href="#panel-systems" data-jump="1">Systems</a>
+        <a href="#panel-agents" data-jump="2">Agents</a>
+        <a href="#panel-safety" data-jump="3">Safety</a>
+        <a href="#panel-proof" data-jump="4">Proof</a>
+      </nav>
+      <a class="resume-cta" href="assets/Adarsh_Pandey_OpenAI_AI_Resume.pdf">Resume</a>
+    </header>
+
+    <aside class="progress-rail" aria-label="Scroll progress">
+      <span data-rail-fill></span>
+      <button class="is-active" type="button" data-jump="0" aria-label="Go to opening panel"></button>
+      <button type="button" data-jump="1" aria-label="Go to systems panel"></button>
+      <button type="button" data-jump="2" aria-label="Go to agents panel"></button>
+      <button type="button" data-jump="3" aria-label="Go to safety panel"></button>
+      <button type="button" data-jump="4" aria-label="Go to proof panel"></button>
+      <button type="button" data-jump="5" aria-label="Go to contact panel"></button>
+    </aside>
+
+    <main>
+      <section class="snap-stage" data-stage aria-label="Adarsh Pandey portfolio">
+        <article id="panel-hero" class="panel panel-hero" data-panel="hero" data-label="00">
+          <div class="panel-copy">
+            <p class="eyebrow">AWS Redshift SDE II · AI + distributed systems</p>
+            <h1>Distributed systems engineer building production AI.</h1>
+            <p class="lede">
+              I build Tier-1 cloud services, fleet-scale execution platforms, and internal AI workflows
+              where orchestration, observability, validation, and human judgment all have to coexist.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="mailto:adarsh.myinbox@gmail.com">Contact</a>
+              <a class="button" href="#panel-systems" data-jump="1">See the proof</a>
+            </div>
+          </div>
+
+          <div class="portrait-system" aria-label="Adarsh Pandey portrait and focus areas">
+            <div class="portrait-shell">
+              <img src="assets/Portfolio.png" alt="Adarsh Pandey">
+            </div>
+            <div class="signal-stack">
+              <div>
+                <span>Role</span>
+                <strong>SDE II · AI + distributed systems</strong>
+              </div>
+              <div>
+                <span>Surface</span>
+                <strong>Cloud + AI platforms</strong>
+              </div>
+              <div>
+                <span>Edge</span>
+                <strong>Production reliability</strong>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article id="panel-systems" class="panel panel-systems" data-panel="systems" data-label="01">
+          <div class="panel-copy">
+            <p class="eyebrow">SDE track</p>
+            <h2>Scale is not a claim. It is a set of failure modes you already planned for.</h2>
+            <p>
+              My backend work sits inside cloud systems where correctness, isolation, rollback behavior,
+              and operational visibility matter. The AI work benefits from that same systems instinct.
+            </p>
+            <ul class="impact-list">
+              <li>Tier-1 orchestration and lifecycle workflows</li>
+              <li>Fleet-scale execution platforms and self-service automation</li>
+              <li>Region-build workflows, validation, CI/CD, and observability</li>
+            </ul>
+          </div>
+          <div class="system-diagram" aria-label="Distributed systems diagram">
+            <div class="diagram-card control">
+              <span>control plane</span>
+              <strong>orchestrate</strong>
+            </div>
+            <div class="diagram-card queue">
+              <span>queue</span>
+              <strong>backpressure</strong>
+            </div>
+            <div class="diagram-card workers">
+              <span>workers</span>
+              <strong>isolate</strong>
+            </div>
+            <div class="diagram-card telemetry">
+              <span>telemetry</span>
+              <strong>observe</strong>
+            </div>
+            <div class="diagram-card recovery">
+              <span>recovery</span>
+              <strong>rollback</strong>
+            </div>
+          </div>
+        </article>
+
+        <article id="panel-agents" class="panel panel-agents" data-panel="agents" data-label="02">
+          <div class="panel-copy">
+            <p class="eyebrow">AI track</p>
+            <h2>Agents are only impressive when engineers can trust the handoff.</h2>
+            <p>
+              Built an internal multi-agent developer platform used by hundreds of engineers to automate
+              parts of the software lifecycle through specialized agents, persistent context, tool use,
+              validation, and approval gates.
+            </p>
+            <div class="metric-row">
+              <div><span>Mode</span><strong>multi-agent</strong></div>
+              <div><span>Audience</span><strong>engineers</strong></div>
+              <div><span>Bias</span><strong>safe automation</strong></div>
+            </div>
+          </div>
+          <div class="agent-orbit" aria-label="Agent workflow visualization">
+            <div class="agent-core">
+              <span>context</span>
+              <strong>workflow state</strong>
+            </div>
+            <span class="agent-node n1">plan</span>
+            <span class="agent-node n2">code</span>
+            <span class="agent-node n3">review</span>
+            <span class="agent-node n4">validate</span>
+            <span class="agent-node n5">approve</span>
+          </div>
+        </article>
+
+        <article id="panel-safety" class="panel panel-safety" data-panel="safety" data-label="03">
+          <div class="panel-copy">
+            <p class="eyebrow">Production contract</p>
+            <h2>The difference between a demo and a system is what happens after the weird edge.</h2>
+            <p>
+              I like AI systems that carry their own guardrails: traceability, policy checks,
+              deterministic validation, clear ownership, and human intervention for high-risk actions.
+            </p>
+            <ul class="impact-list compact">
+              <li>Structured outputs and resumable state</li>
+              <li>Policy checks before tool execution</li>
+              <li>Dashboards, logs, audits, and rollback paths</li>
+            </ul>
+          </div>
+          <div class="gate-board" aria-label="Operational safety gates">
+            <div class="gate is-open"><span>01</span><strong>Intent</strong><p>capture goal and constraints</p></div>
+            <div class="gate is-open"><span>02</span><strong>Plan</strong><p>decompose before action</p></div>
+            <div class="gate is-open"><span>03</span><strong>Validate</strong><p>tests, policy, security</p></div>
+            <div class="gate"><span>04</span><strong>Approve</strong><p>human gate for risk</p></div>
+            <div class="gate"><span>05</span><strong>Operate</strong><p>observe and recover</p></div>
+          </div>
+        </article>
+
+        <article id="panel-proof" class="panel panel-proof" data-panel="proof" data-label="04">
+          <div class="panel-copy">
+            <p class="eyebrow">Candidate signal</p>
+            <h2>One profile, two hiring loops: strong SDE and serious AI systems.</h2>
+            <p>
+              The story is intentionally dual-track: backend/platform roles should see production depth,
+              while AI teams should see someone who can make agentic systems reliable in real workflows.
+            </p>
+          </div>
+          <div class="proof-terminal" aria-label="Career proof terminal">
+            <div class="terminal-bar">
+              <span></span><span></span><span></span><strong>candidate.signal</strong>
+            </div>
+            <div class="terminal-body">
+              <p><span>2024-now</span> AWS Redshift SDE II, production AI agents, fleet execution, operational automation</p>
+              <p><span>2022-2024</span> AWS Redshift SDE II, orchestration services, validation, observability, region onboarding</p>
+              <p><span>2021-2022</span> Zeta Suite SDE I, core banking APIs and deployment platform</p>
+              <p><span>2020-2021</span> Full-stack engineering, TypeScript APIs, Angular, CI/CD, Docker</p>
+            </div>
+          </div>
+        </article>
+
+        <article id="panel-contact" class="panel panel-contact" data-panel="contact" data-label="05">
+          <div class="panel-copy">
+            <p class="eyebrow">Next run</p>
+            <h2>AI infrastructure, developer platforms, or distributed systems at serious scale.</h2>
+            <p>
+              I am interested in teams building coding agents, AI developer tools, reliable cloud platforms,
+              secure tool execution, and backend systems where quality actually matters.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="mailto:adarsh.myinbox@gmail.com">adarsh.myinbox@gmail.com</a>
+              <a class="button" href="https://www.linkedin.com/in/coderpen/">LinkedIn</a>
+              <a class="button" href="assets/Adarsh_Pandey_OpenAI_AI_Resume.pdf">Resume</a>
+            </div>
+          </div>
+          <div class="contact-visual">
+            <img src="assets/agent-infrastructure-hero.png" alt="">
+            <div class="contact-card">
+              <span>fit</span>
+              <strong>AI + SDE roles</strong>
+              <p>production systems, agent workflows, evals, validation, observability</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="vendor/gsap.min.js"></script>
+    <script src="vendor/ScrollTrigger.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
