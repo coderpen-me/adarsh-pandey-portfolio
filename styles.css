@@ -264,14 +264,14 @@ h1,
 h2 {
   max-width: 1060px;
   margin-bottom: 24px;
-  font-size: clamp(4.4rem, 7.3vw, 9.8rem);
+  font-size: clamp(3.3rem, 5.48vw, 7.35rem);
   line-height: 0.88;
   letter-spacing: 0;
   overflow-wrap: anywhere;
 }
 
 h2 {
-  font-size: clamp(3.2rem, 6.2vw, 8.2rem);
+  font-size: clamp(2.4rem, 4.65vw, 6.15rem);
 }
 
 .lede,
@@ -676,7 +676,7 @@ h2 {
 
   h1,
   h2 {
-    font-size: clamp(3.4rem, 7vw, 6rem);
+    font-size: clamp(2.55rem, 5.25vw, 4.5rem);
   }
 
   .portrait-system {
@@ -762,7 +762,7 @@ h2 {
 
   h1,
   h2 {
-    font-size: clamp(3rem, 14vw, 5rem);
+    font-size: clamp(2.25rem, 10.5vw, 3.75rem);
     line-height: 0.9;
   }
 
@@ -867,7 +867,7 @@ h2 {
 
   h1,
   h2 {
-    font-size: clamp(2.62rem, 13.2vw, 4.2rem);
+    font-size: clamp(1.97rem, 9.9vw, 3.15rem);
   }
 
   .portrait-system {
