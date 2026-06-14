@@ -342,9 +342,9 @@ h2 {
   grid-template-columns: minmax(0, 1fr);
   width: 100%;
   max-width: clamp(340px, 31vw, 470px);
-  align-self: start;
+  align-self: center;
   justify-self: end;
-  margin-top: clamp(38px, 5vh, 58px);
+  margin-top: 0;
 }
 
 .panel-hero .portrait-shell {
@@ -659,12 +659,6 @@ h2 {
 @media (min-width: 1800px) {
   .panel {
     grid-template-columns: minmax(0, 1.05fr) minmax(520px, 0.78fr);
-  }
-}
-
-@media (min-width: 1800px) and (min-height: 1700px) {
-  .panel-hero .portrait-system {
-    margin-top: clamp(360px, 19vh, 430px);
   }
 }
 
