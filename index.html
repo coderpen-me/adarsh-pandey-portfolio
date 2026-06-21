@@ -3,212 +3,523 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Adarsh Pandey - distributed systems engineer building production AI infrastructure.">
-    <title>Adarsh Pandey | Systems Deck</title>
+    <meta
+      name="description"
+      content="Adarsh Pandey builds production AI systems, distributed cloud infrastructure, developer platforms, and reliability-heavy backend systems."
+    >
+    <title>Adarsh Pandey | Production AI Systems</title>
     <link rel="preload" href="assets/Portfolio.png" as="image">
     <link rel="preload" href="assets/agent-infrastructure-hero.png" as="image">
-    <link rel="stylesheet" href="styles.css?v=hero-align-1">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <canvas id="traceCanvas" aria-hidden="true"></canvas>
+    <canvas id="signalCanvas" aria-hidden="true"></canvas>
 
-    <header class="site-chrome" data-chrome>
-      <a class="mark" href="#panel-hero" aria-label="Adarsh Pandey home">AP</a>
-      <nav aria-label="Portfolio sections">
-        <a href="#panel-systems" data-jump="1">Systems</a>
-        <a href="#panel-agents" data-jump="2">Agents</a>
-        <a href="#panel-safety" data-jump="3">Safety</a>
-        <a href="#panel-proof" data-jump="4">Proof</a>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Adarsh Pandey home">AP</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle>
+        <span>Menu</span>
+        <i aria-hidden="true"></i>
+      </button>
+      <nav id="primary-nav" aria-label="Primary navigation" data-nav>
+        <a href="#work">Work</a>
+        <a href="#ai-systems">AI Systems</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <a class="resume-cta" href="assets/Adarsh_Pandey_OpenAI_AI_Resume.pdf">Resume</a>
+      <a class="resume-link" href="assets/Adarsh_Pandey_Resume.pdf">Resume</a>
     </header>
 
-    <aside class="progress-rail" aria-label="Scroll progress">
-      <span data-rail-fill></span>
-      <button class="is-active" type="button" data-jump="0" aria-label="Go to opening panel"></button>
-      <button type="button" data-jump="1" aria-label="Go to systems panel"></button>
-      <button type="button" data-jump="2" aria-label="Go to agents panel"></button>
-      <button type="button" data-jump="3" aria-label="Go to safety panel"></button>
-      <button type="button" data-jump="4" aria-label="Go to proof panel"></button>
-      <button type="button" data-jump="5" aria-label="Go to contact panel"></button>
-    </aside>
-
-    <main>
-      <section class="snap-stage" data-stage aria-label="Adarsh Pandey portfolio">
-        <article id="panel-hero" class="panel panel-hero" data-panel="hero" data-label="00">
-          <div class="panel-copy">
-            <p class="eyebrow">AWS Redshift SDE II · AI + distributed systems</p>
-            <h1>Distributed systems engineer building production AI.</h1>
-            <p class="lede">
-              I build Tier-1 cloud services, fleet-scale execution platforms, and internal AI workflows
-              where orchestration, observability, validation, and human judgment all have to coexist.
-            </p>
-            <div class="hero-actions">
-              <a class="button primary" href="mailto:adarsh.myinbox@gmail.com">Contact</a>
-              <a class="button" href="#panel-systems" data-jump="1">See the proof</a>
-            </div>
+    <main id="top">
+      <section class="hero section-grid" aria-label="Intro">
+        <div class="hero-copy">
+          <p class="eyebrow">San Francisco Bay Area · AI infrastructure · distributed systems</p>
+          <h1>I build production AI systems on top of cloud-scale infrastructure.</h1>
+          <p class="lede">
+            I am a Software Development Engineer II at Amazon Web Services, working across AI agents,
+            distributed systems, developer infrastructure, cloud automation, and operational safety.
+          </p>
+          <p>
+            My work sits where AI meets real production constraints: long-running workflows, safe tool use,
+            human approval, deterministic state, observability, rollback paths, and systems engineers can trust
+            after the demo.
+          </p>
+          <div class="hero-actions" aria-label="Primary calls to action">
+            <a class="button primary" href="#work">View work</a>
+            <a class="button" href="assets/Adarsh_Pandey_Resume.pdf">Read resume</a>
+            <a class="button ghost" href="#contact">Start a conversation</a>
           </div>
+        </div>
 
-          <div class="portrait-system" aria-label="Adarsh Pandey portrait and focus areas">
-            <div class="portrait-shell">
-              <img src="assets/Portfolio.png" alt="Adarsh Pandey">
-            </div>
-            <div class="signal-stack">
-              <div>
-                <span>Role</span>
-                <strong>SDE II · AI + distributed systems</strong>
-              </div>
-              <div>
-                <span>Surface</span>
-                <strong>Cloud + AI platforms</strong>
-              </div>
-              <div>
-                <span>Edge</span>
-                <strong>Production reliability</strong>
-              </div>
-            </div>
+        <div class="hero-visual">
+          <div class="portrait-card">
+            <img src="assets/Portfolio.png" alt="Adarsh Pandey">
           </div>
-        </article>
+          <div class="signal-card">
+            <span>Current focus</span>
+            <strong>Production AI systems</strong>
+            <p>Agents, cloud platforms, developer infrastructure, reliability, and safe automation.</p>
+          </div>
+        </div>
+      </section>
 
-        <article id="panel-systems" class="panel panel-systems" data-panel="systems" data-label="01">
-          <div class="panel-copy">
-            <p class="eyebrow">SDE track</p>
-            <h2>Scale is not a claim. It is a set of failure modes you already planned for.</h2>
-            <p>
-              My backend work sits inside cloud systems where correctness, isolation, rollback behavior,
-              and operational visibility matter. The AI work benefits from that same systems instinct.
-            </p>
-            <ul class="impact-list">
-              <li>Tier-1 orchestration and lifecycle workflows</li>
-              <li>Fleet-scale execution platforms and self-service automation</li>
-              <li>Region-build workflows, validation, CI/CD, and observability</li>
+      <section class="signal-strip" aria-label="Focus areas">
+        <span>Production AI agents</span>
+        <span>Distributed systems</span>
+        <span>Cloud infrastructure</span>
+        <span>Developer platforms</span>
+        <span>Operational safety</span>
+      </section>
+
+      <section class="section section-grid arc" id="arc">
+        <div class="section-intro sticky-intro">
+          <p class="eyebrow">The arc</p>
+          <h2>Past: software and distributed systems. Future: production AI, cloud AI, and agents.</h2>
+          <p>
+            The through-line is building useful systems that carry real operational weight.
+            The tools changed. The taste stayed: reduce ambiguity, make failure visible, and give
+            people leverage without hiding the risk.
+          </p>
+        </div>
+        <div class="arc-list">
+          <article class="arc-card">
+            <span>01</span>
+            <h3>Full-stack builder</h3>
+            <p>Built products end to end: APIs, dashboards, admin panels, database-backed apps, deployment scripts, and frontend interfaces.</p>
+          </article>
+          <article class="arc-card">
+            <span>02</span>
+            <h3>Backend and platform engineer</h3>
+            <p>Worked on core banking APIs, transactional systems, production debugging, and one-click deployment workflows.</p>
+          </article>
+          <article class="arc-card">
+            <span>03</span>
+            <h3>Distributed cloud systems engineer</h3>
+            <p>Owned Tier-1 orchestration, lifecycle automation, observability, configuration systems, and cloud-region workflows.</p>
+          </article>
+          <article class="arc-card">
+            <span>04</span>
+            <h3>Production AI systems engineer</h3>
+            <p>Now focused on agents, AI-assisted engineering workflows, evals, structured handoffs, approval gates, and safe tool use.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="work">
+        <div class="section-heading">
+          <p class="eyebrow">Work pillars</p>
+          <h2>Where I create leverage.</h2>
+          <p>Four overlapping muscles: AI systems, distributed infrastructure, developer platforms, and operational safety.</p>
+        </div>
+        <div class="pillar-grid">
+          <article class="pillar-card">
+            <h3>Production AI agents</h3>
+            <p>I build agentic systems that coordinate planning, implementation, review, validation, memory, and human approval inside real engineering workflows.</p>
+            <ul>
+              <li>Multi-agent orchestration</li>
+              <li>Structured outputs and handoffs</li>
+              <li>Long-running workflow state</li>
+              <li>Human approval gates</li>
             </ul>
-          </div>
-          <div class="system-diagram" aria-label="Distributed systems diagram">
-            <div class="diagram-card control">
-              <span>control plane</span>
-              <strong>orchestrate</strong>
-            </div>
-            <div class="diagram-card queue">
-              <span>queue</span>
-              <strong>backpressure</strong>
-            </div>
-            <div class="diagram-card workers">
-              <span>workers</span>
-              <strong>isolate</strong>
-            </div>
-            <div class="diagram-card telemetry">
-              <span>telemetry</span>
-              <strong>observe</strong>
-            </div>
-            <div class="diagram-card recovery">
-              <span>recovery</span>
-              <strong>rollback</strong>
-            </div>
-          </div>
-        </article>
-
-        <article id="panel-agents" class="panel panel-agents" data-panel="agents" data-label="02">
-          <div class="panel-copy">
-            <p class="eyebrow">AI track</p>
-            <h2>Agents are only impressive when engineers can trust the handoff.</h2>
-            <p>
-              Built an internal multi-agent developer platform used by hundreds of engineers to automate
-              parts of the software lifecycle through specialized agents, persistent context, tool use,
-              validation, and approval gates.
-            </p>
-            <div class="metric-row">
-              <div><span>Mode</span><strong>multi-agent</strong></div>
-              <div><span>Audience</span><strong>engineers</strong></div>
-              <div><span>Bias</span><strong>safe automation</strong></div>
-            </div>
-          </div>
-          <div class="agent-orbit" aria-label="Agent workflow visualization">
-            <div class="agent-core">
-              <span>context</span>
-              <strong>workflow state</strong>
-            </div>
-            <span class="agent-node n1">plan</span>
-            <span class="agent-node n2">code</span>
-            <span class="agent-node n3">review</span>
-            <span class="agent-node n4">validate</span>
-            <span class="agent-node n5">approve</span>
-          </div>
-        </article>
-
-        <article id="panel-safety" class="panel panel-safety" data-panel="safety" data-label="03">
-          <div class="panel-copy">
-            <p class="eyebrow">Production contract</p>
-            <h2>The difference between a demo and a system is what happens after the weird edge.</h2>
-            <p>
-              I like AI systems that carry their own guardrails: traceability, policy checks,
-              deterministic validation, clear ownership, and human intervention for high-risk actions.
-            </p>
-            <ul class="impact-list compact">
-              <li>Structured outputs and resumable state</li>
-              <li>Policy checks before tool execution</li>
-              <li>Dashboards, logs, audits, and rollback paths</li>
+          </article>
+          <article class="pillar-card">
+            <h3>Distributed cloud systems</h3>
+            <p>I design backend and orchestration systems where reliability, blast-radius control, isolation, and operational visibility matter.</p>
+            <ul>
+              <li>Tier-1 orchestration</li>
+              <li>Fleet-scale execution</li>
+              <li>Regional automation</li>
+              <li>High-availability APIs</li>
             </ul>
-          </div>
-          <div class="gate-board" aria-label="Operational safety gates">
-            <div class="gate is-open"><span>01</span><strong>Intent</strong><p>capture goal and constraints</p></div>
-            <div class="gate is-open"><span>02</span><strong>Plan</strong><p>decompose before action</p></div>
-            <div class="gate is-open"><span>03</span><strong>Validate</strong><p>tests, policy, security</p></div>
-            <div class="gate"><span>04</span><strong>Approve</strong><p>human gate for risk</p></div>
-            <div class="gate"><span>05</span><strong>Operate</strong><p>observe and recover</p></div>
-          </div>
-        </article>
+          </article>
+          <article class="pillar-card">
+            <h3>Developer infrastructure</h3>
+            <p>I like building tools that compress slow engineering workflows into reliable self-service systems used by real teams.</p>
+            <ul>
+              <li>Internal platforms</li>
+              <li>Validation frameworks</li>
+              <li>CI/CD and infrastructure-as-code</li>
+              <li>Dashboards and status signals</li>
+            </ul>
+          </article>
+          <article class="pillar-card">
+            <h3>Operational safety</h3>
+            <p>I care about the contract between automation and accountability: what gets checked, who approves, what is logged, and how systems recover.</p>
+            <ul>
+              <li>Security reviews</li>
+              <li>Policy checks</li>
+              <li>Audit trails and metrics</li>
+              <li>Rollback paths</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-        <article id="panel-proof" class="panel panel-proof" data-panel="proof" data-label="04">
-          <div class="panel-copy">
-            <p class="eyebrow">Candidate signal</p>
-            <h2>One profile, two hiring loops: strong SDE and serious AI systems.</h2>
+      <section class="section case-section" id="ai-systems">
+        <div class="section-heading wide">
+          <p class="eyebrow">Selected work</p>
+          <h2>Proof without leaking the machinery.</h2>
+          <p>
+            These are public-safe summaries of production work. Internal names, proprietary implementation details,
+            and operational mechanics are intentionally omitted.
+          </p>
+        </div>
+        <div class="case-grid">
+          <article class="case-card featured">
+            <div>
+              <p class="case-kicker">AI systems</p>
+              <h3>Multi-agent platform for long-running engineering workflows</h3>
+              <p>
+                Built a production-grade multi-agent system that helps engineering teams coordinate planning,
+                design, implementation, review, validation, cleanup, notifications, observability, and memory.
+              </p>
+            </div>
+            <dl class="metrics">
+              <div><dt>300+</dt><dd>engineers supported</dd></div>
+              <div><dt>Stateful</dt><dd>auditable workflow routing</dd></div>
+              <div><dt>Safe</dt><dd>tool use and approvals</dd></div>
+            </dl>
+          </article>
+
+          <article class="case-card">
+            <p class="case-kicker">GenAI review</p>
+            <h3>AI-assisted review system for high-risk operational work</h3>
             <p>
-              The story is intentionally dual-track: backend/platform roles should see production depth,
-              while AI teams should see someone who can make agentic systems reliable in real workflows.
+              Designed a GenAI-assisted approval workflow combining model reasoning, dynamic validation,
+              policy checks, retrieval, and safe tool orchestration for risky operational changes.
+            </p>
+            <dl class="metrics compact">
+              <div><dt>200+</dt><dd>engineers</dd></div>
+              <div><dt>90%</dt><dd>approval automation</dd></div>
+              <div><dt>92%</dt><dd>reviewer agreement</dd></div>
+            </dl>
+          </article>
+
+          <article class="case-card visual-case">
+            <img src="assets/agent-infrastructure-hero.png" alt="Abstract production AI infrastructure visualization">
+            <div>
+              <p class="case-kicker">AI infrastructure</p>
+              <h3>Making agents observable, resumable, and accountable</h3>
+              <p>
+                Implemented structured handoffs, context management, retry behavior, recovery logic,
+                validation gates, and operational monitoring for long-running AI workflows.
+              </p>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <p class="case-kicker">Distributed execution</p>
+            <h3>Fleet-scale execution platform</h3>
+            <p>
+              Architecting a regionalized serverless execution platform for large-scale operational workloads,
+              replacing manually managed scheduled jobs with a unified self-service model.
+            </p>
+            <dl class="metrics compact">
+              <div><dt>300K+</dt><dd>scheduled jobs replaced</dd></div>
+              <div><dt>Regional</dt><dd>blast-radius reduction</dd></div>
+            </dl>
+          </article>
+
+          <article class="case-card">
+            <p class="case-kicker">Cloud automation</p>
+            <h3>Cloud region build automation</h3>
+            <p>
+              Led automation work across infrastructure domains, replacing manual coordination with repeatable
+              pipelines, validation, notifications, and self-service tooling.
+            </p>
+            <dl class="metrics compact">
+              <div><dt>10+</dt><dd>teams partnered</dd></div>
+              <div><dt>40+</dt><dd>manual steps eliminated</dd></div>
+              <div><dt>2-3w</dt><dd>saved per region in one workflow</dd></div>
+            </dl>
+          </article>
+
+          <article class="case-card">
+            <p class="case-kicker">Control plane</p>
+            <h3>Tier-1 cloud orchestration and lifecycle platform</h3>
+            <p>
+              Led work on Amazon Redshift cloud data infrastructure, improving lifecycle workflows,
+              dynamic configuration, testing, observability, cost efficiency, and regional onboarding.
+            </p>
+            <dl class="metrics compact">
+              <div><dt>Millions</dt><dd>of instances managed yearly</dd></div>
+              <div><dt>4w -> 1h</dt><dd>configuration change path</dd></div>
+              <div><dt>66%</dt><dd>cost reduction in one area</dd></div>
+            </dl>
+          </article>
+
+          <article class="case-card">
+            <p class="case-kicker">Banking platform</p>
+            <h3>One-click deployment platform for core banking services</h3>
+            <p>
+              Designed an internal deployment platform for dynamically provisioning banking microservices,
+              turning a long manual rollout process into a repeatable self-service workflow.
+            </p>
+            <dl class="metrics compact">
+              <div><dt>1.5mo -> hrs</dt><dd>deployment compression</dd></div>
+              <div><dt>Strict</dt><dd>availability and consistency</dd></div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-grid capability-section">
+        <div class="section-intro sticky-intro">
+          <p class="eyebrow">Capability map</p>
+          <h2>Depth where AI has to become a system.</h2>
+          <p>
+            I do not think of AI work as separate from software engineering. The hard part is stitching
+            models, tools, state, infra, validation, and human judgment into one reliable product surface.
+          </p>
+        </div>
+        <div class="capability-groups">
+          <article>
+            <h3>AI systems</h3>
+            <p>Multi-agent orchestration, tool-using LLM workflows, LangGraph, context engineering, structured outputs, RAG, evals, validation, observability, and safety guardrails.</p>
+          </article>
+          <article>
+            <h3>Backend and distributed systems</h3>
+            <p>Java, Python, Go, TypeScript, C/C++, microservices, REST/GraphQL APIs, workflow orchestration, control-plane services, and high-availability systems.</p>
+          </article>
+          <article>
+            <h3>Cloud and infrastructure</h3>
+            <p>AWS CDK, ECS/Fargate, Lambda, Step Functions, SQS, DynamoDB, S3, CloudWatch, AppConfig, IAM, Docker, Kubernetes, and CI/CD.</p>
+          </article>
+          <article>
+            <h3>Product and full-stack roots</h3>
+            <p>Node.js, Express.js, Angular, React, MongoDB, MySQL, PostgreSQL, admin panels, dashboards, frontend component systems, and production deployments.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section experience" id="experience">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2>A career built around systems that matter.</h2>
+        </div>
+        <ol class="timeline">
+          <li>
+            <time>Nov 2024 - Present</time>
+            <div>
+              <h3>Software Development Engineer II · Amazon Web Services</h3>
+              <p>San Francisco Bay Area · Amazon Redshift</p>
+              <p>Production AI agents, distributed execution platforms, developer infrastructure, region-build automation, security reviews, and operational safety.</p>
+            </div>
+          </li>
+          <li>
+            <time>Oct 2023 - Nov 2024</time>
+            <div>
+              <h3>Software Development Engineer II · Amazon Web Services</h3>
+              <p>Dublin, Ireland · Amazon Redshift</p>
+              <p>Tier-1 orchestration, lifecycle workflows, dynamic configuration, observability, automated testing, cost efficiency, and regional onboarding.</p>
+            </div>
+          </li>
+          <li>
+            <time>Sep 2022 - Sep 2023</time>
+            <div>
+              <h3>Software Development Engineer · Amazon Web Services</h3>
+              <p>Dublin, Ireland · Amazon Redshift</p>
+              <p>Distributed backend services, operational automation, internal tooling, workflow orchestration, and high-availability cloud systems.</p>
+            </div>
+          </li>
+          <li>
+            <time>Jun 2021 - Sep 2022</time>
+            <div>
+              <h3>Software Development Engineer I · Zeta Suite / Directi</h3>
+              <p>Bengaluru, India</p>
+              <p>Core banking APIs, production debugging, strict consistency systems, and a one-click deployment platform for cloud microservices.</p>
+            </div>
+          </li>
+          <li>
+            <time>Oct 2020 - Jun 2021</time>
+            <div>
+              <h3>Software Engineer - Full Stack · GeoSpoc, an Ola Company</h3>
+              <p>Remote / Pune</p>
+              <p>Node.js and TypeScript APIs, Angular SPAs, database schemas, reusable UI components, CI/CD, and Dockerized deployment.</p>
+            </div>
+          </li>
+          <li>
+            <time>Aug 2019 - Aug 2020</time>
+            <div>
+              <h3>Software Developer - Full Stack · Exeliq Tech Solutions</h3>
+              <p>Delhi NCR</p>
+              <p>MEAN-stack applications, admin panels, CMS-like tooling, backend APIs, MongoDB storage, and AWS EC2 deployments.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section build-section">
+        <div class="section-grid">
+          <div class="section-intro">
+            <p class="eyebrow">How I build</p>
+            <h2>A model response is not a system.</h2>
+            <p>
+              I am most interested in AI systems that survive contact with real engineering environments:
+              unclear requirements, partial context, risky tools, long-running tasks, production constraints,
+              and humans who need to trust the outcome.
             </p>
           </div>
-          <div class="proof-terminal" aria-label="Career proof terminal">
-            <div class="terminal-bar">
-              <span></span><span></span><span></span><strong>candidate.signal</strong>
-            </div>
-            <div class="terminal-body">
-              <p><span>2024-now</span> AWS Redshift SDE II, production AI agents, fleet execution, operational automation</p>
-              <p><span>2022-2024</span> AWS Redshift SDE II, orchestration services, validation, observability, region onboarding</p>
-              <p><span>2021-2022</span> Zeta Suite SDE I, core banking APIs and deployment platform</p>
-              <p><span>2020-2021</span> Full-stack engineering, TypeScript APIs, Angular, CI/CD, Docker</p>
-            </div>
+          <div class="principle-list">
+            <p>State, validation, ownership, and recovery make AI useful in production.</p>
+            <p>Agents need contracts: inputs, outputs, handoffs, retry behavior, audit trails, and stop conditions.</p>
+            <p>Human approval should be designed into the workflow, not bolted on after risk appears.</p>
+            <p>The best automation reduces risk and cognitive load at the same time.</p>
           </div>
-        </article>
+        </div>
+      </section>
 
-        <article id="panel-contact" class="panel panel-contact" data-panel="contact" data-label="05">
-          <div class="panel-copy">
-            <p class="eyebrow">Next run</p>
-            <h2>AI infrastructure, developer platforms, or distributed systems at serious scale.</h2>
-            <p>
-              I am interested in teams building coding agents, AI developer tools, reliable cloud platforms,
-              secure tool execution, and backend systems where quality actually matters.
-            </p>
-            <div class="hero-actions">
-              <a class="button primary" href="mailto:adarsh.myinbox@gmail.com">adarsh.myinbox@gmail.com</a>
-              <a class="button" href="https://www.linkedin.com/in/coderpen/">LinkedIn</a>
-              <a class="button" href="assets/Adarsh_Pandey_OpenAI_AI_Resume.pdf">Resume</a>
+      <section class="section" id="projects">
+        <div class="section-heading wide">
+          <p class="eyebrow">Builder archive</p>
+          <h2>Earlier projects that still explain me.</h2>
+          <p>
+            These older projects are intentionally framed as an archive: robotics, computer vision, full-stack products,
+            APIs, dashboards, and experiments from the years before my current AI infrastructure focus.
+          </p>
+        </div>
+        <div class="project-groups">
+          <article class="project-group">
+            <h3>Robotics, computer vision, and ML roots</h3>
+            <div class="project-grid">
+              <a class="project-card" href="https://github.com/coderpen-me/Image-Processing/tree/master/Line-Detection" target="_blank" rel="noreferrer">
+                <img src="assets/project-line.jpg" alt="OpenCV line follower project thumbnail">
+                <span>Python · OpenCV</span>
+                <h4>OpenCV Line Follower</h4>
+                <p>Detected line curves and angles for robotics navigation experiments.</p>
+              </a>
+              <a class="project-card" href="https://github.com/coderpen-me/Image-Processing/blob/master/Robocon2018pi.py" target="_blank" rel="noreferrer">
+                <img src="assets/project-object-detection.jpg" alt="Autonomous object detection project thumbnail">
+                <span>Robocon · Embedded systems</span>
+                <h4>Autonomous Object Detection</h4>
+                <p>Computer-vision work from robotics competitions and embedded automation.</p>
+              </a>
+              <a class="project-card" href="https://github.com/coderpen-me/face-recognition-dlib" target="_blank" rel="noreferrer">
+                <img src="assets/project-surveillance.jpg" alt="Video surveillance project thumbnail">
+                <span>DLib · OpenCV · AWS</span>
+                <h4>Video Surveillance System</h4>
+                <p>Face-recognition and surveillance prototype using deep learning and cloud compute.</p>
+              </a>
+              <a class="project-card" href="https://github.com/coderpen-me/Machine-Learning-/blob/master/Python/linear%20regression.py" target="_blank" rel="noreferrer">
+                <img src="assets/project-regression.jpg" alt="Linear regression project thumbnail">
+                <span>Python · Statistics</span>
+                <h4>Linear Regression</h4>
+                <p>Early machine-learning fundamentals, implemented directly in Python.</p>
+              </a>
             </div>
-          </div>
-          <div class="contact-visual">
-            <img src="assets/agent-infrastructure-hero.png" alt="">
-            <div class="contact-card">
-              <span>fit</span>
-              <strong>AI + SDE roles</strong>
-              <p>production systems, agent workflows, evals, validation, observability</p>
+          </article>
+
+          <article class="project-group">
+            <h3>Full-stack and product builds</h3>
+            <div class="project-grid">
+              <a class="project-card" href="https://github.com/coderpen-me/Bus-Booking-Back-End" target="_blank" rel="noreferrer">
+                <div class="project-placeholder">API</div>
+                <span>Node.js · Express · MongoDB · AWS</span>
+                <h4>Bus Booking Backend API</h4>
+                <p>Backend API system for bookings, data modeling, and service deployment.</p>
+              </a>
+              <a class="project-card" href="https://exeliqsolutions.com/" target="_blank" rel="noreferrer">
+                <img src="assets/project-exeliq.jpg" alt="Exeliq Tech Solutions project thumbnail">
+                <span>MongoDB · Express · Angular · Node</span>
+                <h4>Exeliq Tech Solutions</h4>
+                <p>Full-stack company site and admin tooling from early product work.</p>
+              </a>
+              <a class="project-card" href="https://onelap.herokuapp.com/" target="_blank" rel="noreferrer">
+                <img src="assets/project-onelap.jpg" alt="Onelap project thumbnail">
+                <span>Angular · Node.js · Bootstrap</span>
+                <h4>Onelap</h4>
+                <p>Frontend and backend build for a web product prototype.</p>
+              </a>
+              <a class="project-card" href="https://akgecrobotics.com" target="_blank" rel="noreferrer">
+                <img src="assets/project-akgec.jpg" alt="AKGEC Robotics project thumbnail">
+                <span>HTML · CSS · PHP</span>
+                <h4>AKGEC Robotics</h4>
+                <p>Robotics community website from college builder years.</p>
+              </a>
+              <a class="project-card" href="https://omoads-front.herokuapp.com/" target="_blank" rel="noreferrer">
+                <img src="assets/project-omo.jpg" alt="Omoads project thumbnail">
+                <span>Django · HTML · CSS</span>
+                <h4>Omoads</h4>
+                <p>Web application build with backend, templates, and deployment work.</p>
+              </a>
+              <a class="project-card" href="https://akgecrobotics.com/fablab/" target="_blank" rel="noreferrer">
+                <img src="assets/project-fablab.jpg" alt="FabLab Inventory Software project thumbnail">
+                <span>MySQL · PHP · Bootstrap</span>
+                <h4>FabLab Inventory Software</h4>
+                <p>Inventory workflow software for a campus fabrication lab.</p>
+              </a>
             </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section notes" id="writing">
+        <div class="section-heading">
+          <p class="eyebrow">Thinking topics</p>
+          <h2>Ideas worth a conversation.</h2>
+          <p>Public-ready topics I like discussing with engineers, founders, and teams building serious AI systems.</p>
+        </div>
+        <div class="note-grid">
+          <article><span>Systems lens</span><h3>What distributed systems taught me about AI agents</h3></article>
+          <article><span>Production AI</span><h3>Why reliable AI needs workflow state, not just prompts</h3></article>
+          <article><span>Safety</span><h3>Designing approval gates for high-risk automation</h3></article>
+          <article><span>Evals</span><h3>How validation changes when agents use tools</h3></article>
+          <article><span>Cloud scale</span><h3>The hidden work behind cloud region automation</h3></article>
+          <article><span>Builder arc</span><h3>From robotics to cloud AI: the long route into autonomy</h3></article>
+        </div>
+      </section>
+
+      <section class="section section-grid about">
+        <div class="section-intro">
+          <p class="eyebrow">About</p>
+          <h2>I like systems at the edge of ambition and responsibility.</h2>
+          <div class="achievement-row">
+            <span>National Gold Medal · World Robot Olympiad India 2018</span>
+            <span>Rank 6 · Robocon 2018</span>
+            <span>Qualified · CodeVita and HackWithInfy 2019</span>
           </div>
-        </article>
+        </div>
+        <div class="about-copy">
+          <p>
+            My path has moved through robotics, full-stack products, core banking, cloud infrastructure,
+            and now production AI systems. The through-line is simple: I enjoy turning messy, high-stakes
+            workflows into systems people can rely on.
+          </p>
+          <p>
+            I have mentored engineers, written design documents, led technical direction across teams,
+            and helped turn manual engineering work into repeatable platforms. I am especially curious
+            about AI agents, cloud AI, developer tools, critical infrastructure, and the engineering craft
+            needed to make autonomy accountable.
+          </p>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact-card-main">
+          <p class="eyebrow">Contact</p>
+          <h2>Let us talk if you are building what production AI becomes next.</h2>
+          <p>
+            Reach out if you are building AI infrastructure, coding agents, developer platforms,
+            cloud AI systems, or reliability-heavy backend systems. I also enjoy thoughtful conversations
+            about distributed systems, agents, engineering craft, and safe automation.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="mailto:adarsh.myinbox@gmail.com">Email</a>
+            <a class="button" href="https://www.linkedin.com/in/coderpen/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="button" href="https://github.com/coderpen-me" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="button ghost" href="assets/Adarsh_Pandey_Resume.pdf">Resume</a>
+          </div>
+        </div>
       </section>
     </main>
 
-    <script src="vendor/gsap.min.js"></script>
-    <script src="vendor/ScrollTrigger.min.js"></script>
+    <footer class="site-footer">
+      <span>Adarsh Pandey</span>
+      <span>Production AI systems · distributed cloud infrastructure · San Francisco Bay Area</span>
+    </footer>
+
     <script src="app.js"></script>
   </body>
 </html>
